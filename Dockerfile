@@ -3,7 +3,7 @@ WORKDIR /usr/src/NATS-WebUI
 COPY . .
 RUN cargo build --release
 
-FROM node:lts as frontend-builder
+FROM node:16 as frontend-builder
 WORKDIR /usr/src/NATS-WebUI
 COPY . .
 WORKDIR /usr/src/NATS-WebUI/web
